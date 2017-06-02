@@ -1,0 +1,9 @@
+{
+  "development":{
+    "server":{
+      "port":8000,
+      "allowCrossDomain":true,
+      "staticFolder":"public"
+    }
+  }
+}

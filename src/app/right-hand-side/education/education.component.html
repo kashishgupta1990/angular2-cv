@@ -1,0 +1,16 @@
+<aside class="education aside section">
+    <div class="section-inner">
+        <h2 class="heading">Education</h2>
+        <div class="content">
+            <div class="item" *ngFor="let course of educationQualification">
+                <h3 class="title">
+                    <i class="fa fa-graduation-cap"></i>
+                    {{course.course}}</h3>
+                <h4 class="university">
+                    {{course.university}}
+                    <span class="year">{{course.year}}</span>
+                </h4>
+            </div><!--//item-->
+        </div><!--//content-->
+    </div><!--//section-inner-->
+</aside>

@@ -1,0 +1,19 @@
+<aside class="languages aside section">
+    <div class="section-inner">
+        <h2 class="heading">Languages</h2>
+        <div class="content">
+            <ul class="list-unstyled">
+                <li class="item" *ngFor="let language of languages">
+                      <span class="title">
+                        <strong>{{language.language}}:</strong>
+                      </span>
+                    <span class="level">
+                    {{language.level}}
+                    <br class="visible-sm visible-xs"/>
+                    <i class="fa fa-star" *ngFor="let rate of language.rateList"></i>
+                  </span>
+                </li><!--//item-->
+            </ul>
+        </div><!--//content-->
+    </div><!--//section-inner-->
+</aside>

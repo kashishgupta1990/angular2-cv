@@ -1,0 +1,22 @@
+<!-- ******HEADER****** -->
+<header class="header">
+    <div class="container">
+        <img class="profile-image img-responsive pull-left" [src]="profileImageLink" [alt]="name"/>
+        <div class="profile-content pull-left">
+            <h1 class="name">{{name}}</h1>
+            <h2 class="desc">{{description}}</h2>
+            <ul class="social list-inline">
+                <li *ngIf="twitter"><a target="_blank" [href]="twitter"><i class="fa fa-twitter"></i></a></li>
+                <li *ngIf="googlePlus"><a target="_blank" [href]="googlePlus"><i class="fa fa-google-plus"></i></a></li>
+                <li *ngIf="linkedIn"><a target="_blank" [href]="linkedIn"><i class="fa fa-linkedin"></i></a></li>
+                <li *ngIf="github"><a target="_blank" [href]="github"><i class="fa fa-github-alt"></i></a></li>
+                <!--<li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li>-->
+            </ul>
+        </div><!--//profile-->
+        <a *ngIf="headerButton.text" class="btn btn-cta-primary pull-right" [href]="headerButton.link" target="_blank">
+            <i class="fa fa-paper-plane"></i>
+            {{headerButton.text}}
+        </a>
+    </div><!--//container-->
+</header>
+<!--//header-->

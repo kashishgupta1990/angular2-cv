@@ -1,28 +1,31 @@
-# KashishSiteUpdate
+# Angular2 CV Site
+This project is an easy and fast way to create your Curriculum Vitae (CV) single page website. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
+## Demo Link
+http://kashishgupta.in/
+
+## Where do I have to update my CV content?
+Just go to following path: `/src/app/services` and update the content in `SharedService.ts` file. 
+
+## Build Information
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
+- ng build --prod --env=prod
 
 ## Development server
-
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
 ## Build
-
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Deployment Steps
+- `SSH` your destination server
+- Copy the content present in `dist/` folder and past it into any static directory server like `NGINX` or `APACHE`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Open Source
+- I am encourage the people to `Fork` this project and more sections to enhance the theme.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Future Plan
+- Have to add angular2 routing to add more pages.
+- Add more sections 
+- Create database to store / add the CV data.
+- Create Admin panel to do CRUD operation on CV.

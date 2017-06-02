@@ -1,0 +1,38 @@
+<aside class="skills aside section">
+  <div class="section-inner">
+    <h2 class="heading">Skills</h2>
+    <div class="content">
+      <p class="intro">
+        {{skill.description}}
+      </p>
+
+      <div class="skillset">
+
+        <div class="item" *ngFor="let skillset of skill.list">
+          <h3 class="level-title">
+            {{skillset.title}}
+            <span class="level-label"
+                  data-toggle="tooltip"
+                  data-placement="left"
+                  data-animation="true"
+                  title="{{skillset.metaTitle}}">
+              {{skillset.level}}
+            </span>
+          </h3>
+          <div class="level-bar">
+            <div class="level-bar-inner" [ngStyle]="{'width':skillset.levelBar}">
+            </div>
+          </div>
+        </div>
+
+        <p *ngIf="skill.viewMoreLink">
+          <a class="more-link" target="_blank" [href]="skill.viewMoreLink">
+            <i class="fa fa-external-link">
+            </i> View More
+          </a>
+        </p>
+
+      </div>
+    </div><!--//content-->
+  </div><!--//section-inner-->
+</aside>

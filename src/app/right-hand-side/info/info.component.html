@@ -1,0 +1,29 @@
+<aside class="info aside section">
+    <div class="section-inner">
+        <h2 class="heading sr-only">Basic Information</h2>
+        <div class="content">
+            <ul class="list-unstyled">
+                <li *ngIf="person.place">
+                    <i class="fa fa-map-marker"></i>
+                    <span class="sr-only">Location:</span>
+                    {{person.place}}
+                </li>
+                <li *ngIf="person.emailId">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="sr-only">Email:</span>
+                    <a target="_blank" [href]="emailTo">{{person.emailId}}</a>
+                </li>
+                <li *ngIf="person.websiteLink">
+                    <i class="fa fa-link"></i>
+                    <span class="sr-only">Website:</span>
+                    <a target="_blank" [href]="person.websiteLink">{{person.websiteLink}}</a>
+                </li>
+                <li *ngIf="person.blogLink">
+                    <i class="fa fa-link"></i>
+                    <span class="sr-only">Blog:</span>
+                    <a target="_blank" [href]="person.blogLink">{{person.blogLink}}</a>
+                </li>
+            </ul>
+        </div><!--//content-->
+    </div><!--//section-inner-->
+</aside>

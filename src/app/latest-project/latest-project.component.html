@@ -1,0 +1,40 @@
+<section class="latest section">
+    <div class="section-inner">
+        <h2 class="heading">Latest Projects</h2>
+        <div class="content">
+
+            <div class="item featured text-center">
+                <h3 class="title">
+                    <a [href]="specialProject.projectLink"
+                       target="_blank">{{specialProject.title}}</a>
+                </h3>
+                <p class="summary">{{specialProject.metaTitle}}</p>
+                <div class="featured-image">
+                    <a [href]="specialProject.projectLink"
+                       target="_blank">
+                      <div class="img-responsive project-image">
+                        <img  [src]="specialProject.imageLink"
+                              [alt]="specialProject.title"/>
+                      </div>
+                    </a>
+                    <div class="ribbon">
+                        <div class="text">New</div>
+                    </div>
+                </div>
+
+                <div class="desc text-left">
+                    <p>{{specialProject.description}}</p>
+                </div><!--//desc-->
+                <a class="btn btn-cta-secondary"
+                   [href]="specialProject.projectLink"
+                   target="_blank">
+                    <i class="fa fa-thumbs-o-up"></i>
+                    Back my project</a>
+            </div><!--//item-->
+            <hr *ngIf="projects.length" class="divider"/>
+
+            <app-project *ngFor="let project of projects"  [project]="project"></app-project>
+
+        </div><!--//content-->
+    </div><!--//section-inner-->
+</section>

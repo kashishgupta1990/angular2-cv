@@ -1,0 +1,20 @@
+<section class="projects section">
+  <div class="section-inner">
+    <h2 class="heading">Other Projects</h2>
+    <div class="content">
+      <div *ngFor="let project of projects" class="item">
+        <h3 class="title">
+          <a [href]="project.projectLink">{{project.title}}</a>
+          <span *ngIf="project.isOpenSource" class="label label-theme">Open Source</span>
+        </h3>
+        <p class="summary">{{project.description}}</p>
+        <p>
+          <a class="more-link" [href]="project.projectLink" target="_blank">
+            <i class="fa fa-external-link"></i>
+            {{project.linkText}}
+          </a>
+        </p>
+      </div><!--//item-->
+    </div><!--//content-->
+  </div><!--//section-inner-->
+</section>

@@ -1,0 +1,19 @@
+<section class="experience section">
+  <div class="section-inner">
+    <h2 class="heading">Work Experience</h2>
+    <div class="content">
+      <div class="item" *ngFor="let project of workExperience">
+        <h3 class="title">
+          <a target="_blank" [href]="project.projectLink">
+            {{project.title}}
+          </a>
+          <span class="place">
+            {{project.place}}
+          </span>
+          <span class="year">{{project.year}}</span>
+        </h3>
+        <p>{{project.description}}</p>
+      </div><!--//item-->
+    </div><!--//content-->
+  </div><!--//section-inner-->
+</section>
